@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: "HayPhones | Premium Second-Hand iPhones",
   description: "The best place to buy certified pre-owned iPhones with warranty.",
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+import { CartProvider } from "@/context/CartContext";
+
+// ... existing imports
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,8 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable}`}>
-        {children}
-        <Footer />
+        <CartProvider>
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

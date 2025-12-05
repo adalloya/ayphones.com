@@ -3,10 +3,50 @@
     position: relative;
 }
 
-.grid {
+.desktopGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+}
+
+.mobileCarousel {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slidesTrack {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 0 10px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.indicator.active {
+    background: var(--primary);
+    transform: scale(1.2);
 }
 
 .banner {
@@ -15,6 +55,8 @@
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    /* For Link */
 }
 
 .banner:hover {
@@ -35,8 +77,15 @@
 }
 
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .desktopGrid {
+        display: none;
+    }
+
+    .mobileCarousel {
+        display: block;
+    }
+
+    .section {
+        padding: 40px 0;
     }
 }

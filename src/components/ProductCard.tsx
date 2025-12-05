@@ -12,12 +12,13 @@ interface ProductProps {
     storage: string;
     category: string;
     shipping?: string;
+    onClick?: () => void;
 }
 
-export default function ProductCard({ product }: { product: ProductProps }) {
+export default function ProductCard({ product, onClick }: { product: ProductProps, onClick?: () => void }) {
     return (
         <div className={`${styles.card} glass`}>
-            <div className={styles.imageWrapper}>
+            <div className={styles.imageWrapper} onClick={onClick} style={{ cursor: 'pointer' }}>
                 <Image
                     src={product.image}
                     alt={product.name}
@@ -42,9 +43,9 @@ export default function ProductCard({ product }: { product: ProductProps }) {
                     <span>{product.category}</span>
                 </div>
 
-                <Link href={`/product/${product.id}`} className={styles.link}>
-                    <Button className={styles.button}>Ver</Button>
-                </Link>
+                <button className={styles.button} onClick={onClick}>
+                    Ver
+                </button>
             </div>
         </div>
     );
