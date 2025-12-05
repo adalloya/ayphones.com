@@ -28,10 +28,18 @@
 }
 
 .price {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: var(--primary);
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.shipping {
+    display: block;
+    font-size: 0.9rem;
+    color: #ff00ff;
+    margin-top: 5px;
+    font-weight: 500;
 }
 
 .sectionTitle {

@@ -12,7 +12,12 @@ export default function ProductInfo({ product }: ProductInfoProps) {
             <div className={styles.header}>
                 <span className={styles.condition}>{product.condition}</span>
                 <h1 className={styles.title}>{product.name}</h1>
-                <p className={styles.price}>${product.price}</p>
+                <div className={styles.priceWrapper}>
+                    <span className={styles.price}>${product.price.toLocaleString()}</span>
+                    {product.shipping && (
+                        <span className={styles.shipping}>{product.shipping}</span>
+                    )}
+                </div>
             </div>
 
             <div className={styles.specs}>

@@ -6,8 +6,10 @@ export interface Product {
     images: string[];
     condition: 'Como Nuevo' | 'Excelente' | 'Bueno' | 'Regular';
     storage: string;
-    category: 'iPhone' | 'Apple Watch' | 'Accesorios';
+    category: 'iPhone' | 'iPad' | 'Apple Watch' | 'Samsung' | 'Accesorios';
     model: string;
+    color?: string;
+    shipping?: string;
     specs: {
         display: string;
         processor: string;
@@ -19,138 +21,184 @@ export interface Product {
 export const PRODUCTS: Product[] = [
     {
         id: '1',
-        name: 'iPhone 14 Pro Max',
-        price: 1099,
+        name: 'iPhone 17 Air',
+        price: 17670,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
-        condition: 'Como Nuevo',
+        images: ['/placeholder.png'],
+        condition: 'Excelente',
         storage: '256GB',
+        color: 'Blue',
         category: 'iPhone',
-        model: 'iPhone 14 Pro Max',
-        specs: {
-            display: '6.7" Super Retina XDR',
-            processor: 'A16 Bionic',
-            camera: '48MP Main | 12MP Ultra Wide | 12MP Telephoto',
-            battery: 'Hasta 29 horas de reproducción de video'
-        }
+        model: 'iPhone 17 Air',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.6"', processor: 'A19', camera: '48MP', battery: 'Standard' }
     },
     {
         id: '2',
-        name: 'iPhone 13 Pro',
-        price: 799,
+        name: 'iPhone 17 Air',
+        price: 18620,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
-        condition: 'Excelente',
-        storage: '128GB',
+        images: ['/placeholder.png'],
+        condition: 'Como Nuevo',
+        storage: '256GB',
+        color: 'Black',
         category: 'iPhone',
-        model: 'iPhone 13 Pro',
-        specs: {
-            display: '6.1" Super Retina XDR',
-            processor: 'A15 Bionic',
-            camera: '12MP Pro Camera System',
-            battery: 'Hasta 22 horas de reproducción de video'
-        }
+        model: 'iPhone 17 Air',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.6"', processor: 'A19', camera: '48MP', battery: 'Standard' }
     },
     {
         id: '3',
-        name: 'iPhone 12',
-        price: 499,
+        name: 'iPhone 16 Pro Max',
+        price: 18620,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
+        images: ['/placeholder.png'],
         condition: 'Bueno',
-        storage: '64GB',
+        storage: '256GB',
+        color: 'Gray',
         category: 'iPhone',
-        model: 'iPhone 12',
-        specs: {
-            display: '6.1" Super Retina XDR',
-            processor: 'A14 Bionic',
-            camera: 'Dual 12MP Camera System',
-            battery: 'Hasta 17 horas de reproducción de video'
-        }
+        model: 'iPhone 16 Pro Max',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.9"', processor: 'A18 Pro', camera: '48MP', battery: 'Max' }
     },
     {
         id: '4',
-        name: 'Apple Watch Ultra',
-        price: 649,
+        name: 'iPhone 16 Pro',
+        price: 16720,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
-        condition: 'Como Nuevo',
-        storage: 'GPS + Cellular',
-        category: 'Apple Watch',
-        model: 'Ultra',
-        specs: {
-            display: '49mm Retina Display',
-            processor: 'S8 SiP',
-            camera: 'N/A',
-            battery: 'Hasta 36 horas'
-        }
+        images: ['/placeholder.png'],
+        condition: 'Bueno',
+        storage: '256GB',
+        color: 'Desert',
+        category: 'iPhone',
+        model: 'iPhone 16 Pro',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.3"', processor: 'A18 Pro', camera: '48MP', battery: 'Pro' }
     },
     {
         id: '5',
-        name: 'iPhone 11',
-        price: 349,
+        name: 'iPhone 16 Plus',
+        price: 17195,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
-        condition: 'Regular',
-        storage: '64GB',
+        images: ['/placeholder.png'],
+        condition: 'Como Nuevo',
+        storage: '256GB',
+        color: 'Pink',
         category: 'iPhone',
-        model: 'iPhone 11',
-        specs: {
-            display: '6.1" Liquid Retina HD',
-            processor: 'A13 Bionic',
-            camera: 'Dual 12MP Camera System',
-            battery: 'Hasta 17 horas de reproducción de video'
-        }
+        model: 'iPhone 16 Plus',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.7"', processor: 'A18', camera: '48MP', battery: 'Plus' }
     },
     {
         id: '6',
-        name: 'iPhone 13 mini',
-        price: 599,
+        name: 'iPhone 16',
+        price: 14250,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
+        images: ['/placeholder.png'],
         condition: 'Excelente',
-        storage: '128GB',
+        storage: '256GB',
+        color: 'Black',
         category: 'iPhone',
-        model: 'iPhone 13 mini',
-        specs: {
-            display: '5.4" Super Retina XDR',
-            processor: 'A15 Bionic',
-            camera: 'Dual 12MP Camera System',
-            battery: 'Hasta 17 horas de reproducción de video'
-        }
+        model: 'iPhone 16',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.1"', processor: 'A18', camera: '48MP', battery: 'Standard' }
     },
     {
         id: '7',
-        name: 'AirPods Pro (2nd Gen)',
-        price: 199,
+        name: 'iPhone 15 Pro Max',
+        price: 15770,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
-        condition: 'Como Nuevo',
-        storage: 'N/A',
-        category: 'Accesorios',
-        model: 'AirPods Pro',
-        specs: {
-            display: 'N/A',
-            processor: 'H2 Chip',
-            camera: 'N/A',
-            battery: 'Hasta 6 horas de audio'
-        }
+        images: ['/placeholder.png'],
+        condition: 'Bueno',
+        storage: '256GB',
+        color: 'Blue',
+        category: 'iPhone',
+        model: 'iPhone 15 Pro Max',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.7"', processor: 'A17 Pro', camera: '48MP', battery: 'Max' }
     },
     {
         id: '8',
-        name: 'iPhone 14',
-        price: 749,
+        name: 'iPhone 15',
+        price: 11020,
         image: '/placeholder.png',
-        images: ['/placeholder.png', '/placeholder.png', '/placeholder.png', '/placeholder.png'],
+        images: ['/placeholder.png'],
         condition: 'Bueno',
         storage: '128GB',
+        color: 'Pink',
         category: 'iPhone',
-        model: 'iPhone 14',
-        specs: {
-            display: '6.1" Super Retina XDR',
-            processor: 'A15 Bionic',
-            camera: 'Dual 12MP Camera System',
-            battery: 'Hasta 20 horas de reproducción de video'
-        }
+        model: 'iPhone 15',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.1"', processor: 'A16', camera: '48MP', battery: 'Standard' }
+    },
+    {
+        id: '9',
+        name: 'iPhone 14 Pro Max',
+        price: 11780,
+        image: '/placeholder.png',
+        images: ['/placeholder.png'],
+        condition: 'Regular',
+        storage: '128GB',
+        color: 'Purple',
+        category: 'iPhone',
+        model: 'iPhone 14 Pro Max',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.7"', processor: 'A16', camera: '48MP', battery: 'Max' }
+    },
+    {
+        id: '10',
+        name: 'Samsung S25 Ultra',
+        price: 15390,
+        image: '/placeholder.png',
+        images: ['/placeholder.png'],
+        condition: 'Excelente',
+        storage: '256GB',
+        color: 'Black',
+        category: 'Samsung',
+        model: 'S25 Ultra',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '6.8"', processor: 'Snapdragon 8 Gen 4', camera: '200MP', battery: '5000mAh' }
+    },
+    {
+        id: '11',
+        name: 'iPad Air 11in M2',
+        price: 10260,
+        image: '/placeholder.png',
+        images: ['/placeholder.png'],
+        condition: 'Bueno',
+        storage: '128GB',
+        color: 'Blue',
+        category: 'iPad',
+        model: 'iPad Air M2',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '11"', processor: 'M2', camera: '12MP', battery: '10h' }
+    },
+    {
+        id: '12',
+        name: 'Apple Watch Ultra',
+        price: 8930,
+        image: '/placeholder.png',
+        images: ['/placeholder.png'],
+        condition: 'Bueno',
+        storage: '49mm',
+        color: 'Black',
+        category: 'Apple Watch',
+        model: 'Ultra',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: '49mm', processor: 'S8', camera: 'N/A', battery: '36h' }
+    },
+    {
+        id: '13',
+        name: 'AirPods Pro 3',
+        price: 7030,
+        image: '/placeholder.png',
+        images: ['/placeholder.png'],
+        condition: 'Como Nuevo',
+        storage: 'N/A',
+        color: 'White',
+        category: 'Accesorios',
+        model: 'AirPods Pro 3',
+        shipping: 'Sobre pedido - Entrega en 7 días',
+        specs: { display: 'N/A', processor: 'H3', camera: 'N/A', battery: '30h' }
     }
 ];

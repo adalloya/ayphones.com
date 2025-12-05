@@ -32,6 +32,7 @@ export default function AddProductModal({ onClose, onAdd }: AddProductModalProps
             condition: formData.condition as any,
             storage: formData.storage,
             model: formData.name,
+            shipping: 'Sobre pedido - Entrega en 7 días',
             specs: {
                 display: 'N/A',
                 processor: 'N/A',
@@ -90,7 +91,9 @@ export default function AddProductModal({ onClose, onAdd }: AddProductModalProps
                                 className={styles.select}
                             >
                                 <option value="iPhone">iPhone</option>
+                                <option value="iPad">iPad</option>
                                 <option value="Apple Watch">Apple Watch</option>
+                                <option value="Samsung">Samsung</option>
                                 <option value="Accesorios">Accesorios</option>
                             </select>
                         </div>
