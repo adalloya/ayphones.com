@@ -21,7 +21,7 @@ export default function Hero() {
             <div className="container">
                 <div className={styles.content}>
                     <h1 className={styles.title}>
-                        El Futuro de lo <br />
+                        El Futuro del <br />
                         <span className="neon-text">Pre-Owned</span>
                     </h1>
                     <p className={styles.subtitle}>
