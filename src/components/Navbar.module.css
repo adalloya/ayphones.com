@@ -73,11 +73,12 @@
 
     .links {
         position: fixed;
-        top: 60px;
+        top: 90px;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.95);
+        background: #000000;
+        /* Solid black background */
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 40px 20px;
