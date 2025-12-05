@@ -13,6 +13,7 @@ export default function StorePage() {
     const [search, setSearch] = useState('');
     const [category, setCategory] = useState('Todos');
     const [condition, setCondition] = useState('Todos');
+    const [availability, setAvailability] = useState('Todos');
     const [selectedProduct, setSelectedProduct] = useState<any>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -23,13 +24,23 @@ export default function StorePage() {
 
     const filteredProducts = useMemo(() => {
         return PRODUCTS.filter(product => {
-            const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase());
+            const searchLower = search.toLowerCase();
+            const matchesSearch =
+                product.name.toLowerCase().includes(searchLower) ||
+                product.shipping?.toLowerCase().includes(searchLower);
+
             const matchesCategory = category === 'Todos' || product.category === category;
             const matchesCondition = condition === 'Todos' || product.condition === condition;
 
-            return matchesSearch && matchesCategory && matchesCondition;
+            const matchesAvailability = availability === 'Todos' || (
+                availability === 'Entrega Inmediata'
+                    ? product.shipping === 'Entrega Inmediata'
+                    : product.shipping !== 'Entrega Inmediata'
+            );
+
+            return matchesSearch && matchesCategory && matchesCondition && matchesAvailability;
         });
-    }, [search, category, condition]);
+    }, [search, category, condition, availability]);
 
     return (
         <main className={styles.main}>
@@ -48,6 +59,8 @@ export default function StorePage() {
                         onCategoryChange={setCategory}
                         selectedCondition={condition}
                         onConditionChange={setCondition}
+                        selectedAvailability={availability}
+                        onAvailabilityChange={setAvailability}
                     />
 
                     <div className={styles.grid}>
