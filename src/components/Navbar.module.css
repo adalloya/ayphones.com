@@ -4,10 +4,13 @@
     left: 0;
     right: 0;
     z-index: 100;
-    height: 60px;
-    /* Slightly shorter for mobile feel */
+    height: 90px;
+    /* Taller navbar for larger logo */
     display: flex;
     align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    /* Ensure background is visible */
+    backdrop-filter: blur(10px);
 }
 
 .inner {
@@ -15,6 +18,10 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo {
@@ -25,19 +32,22 @@
     font-size: 1.25rem;
     color: #fff;
     z-index: 101;
-    /* Ensure logo stays above mobile menu */
+    margin-right: 60px;
+    /* More space between logo and links */
 }
 
 .logoImage {
     border-radius: 8px;
-    height: 40px;
-    /* Desktop height */
+    height: 70px;
+    /* Much larger desktop logo */
     width: auto;
 }
 
 .links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    /* More space between links */
+    align-items: center;
 }
 
 .menuBtn {
@@ -55,8 +65,9 @@
     }
 
     .logoImage {
-        height: 28px;
-        /* Smaller mobile logo */
+        height: 60px;
+        /* Much larger mobile logo */
+        width: auto;
     }
 
     .links {

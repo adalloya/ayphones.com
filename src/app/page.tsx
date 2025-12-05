@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Banners from "@/components/Banners";
 import FeaturedProducts from "@/components/FeaturedProducts";
+import Testimonials from "@/components/Testimonials";
 import styles from './page.module.css';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Features />
       <Banners />
       <FeaturedProducts />
+      <Testimonials />
     </main>
   );
 }

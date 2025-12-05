@@ -15,8 +15,13 @@ export default function FeaturedProducts() {
         setIsModalOpen(true);
     };
 
-    // Show the first 4 items (which are the newest/most relevant)
-    const featuredProducts = PRODUCTS.slice(0, 4);
+    // Show a diverse selection of products
+    const featuredProducts = [
+        PRODUCTS.find(p => p.id === '1'),  // iPhone 17 Air
+        PRODUCTS.find(p => p.id === '22'), // Apple Watch Ultra 2
+        PRODUCTS.find(p => p.id === '13'), // AirPods Pro 3
+        PRODUCTS.find(p => p.id === '3'),  // iPhone 16 Pro Max
+    ].filter(Boolean) as Product[];
 
     return (
         <section className={styles.section}>
