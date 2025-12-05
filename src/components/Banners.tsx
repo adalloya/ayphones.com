@@ -24,6 +24,24 @@ export default function Banners() {
                             className={styles.image}
                         />
                     </div>
+                    <div className={`${styles.banner} glass`}>
+                        <Image
+                            src="/banner3.png"
+                            alt="Promoción iPhone Morado"
+                            width={600}
+                            height={800}
+                            className={styles.image}
+                        />
+                    </div>
+                    <div className={`${styles.banner} glass`}>
+                        <Image
+                            src="/banner4.png"
+                            alt="Promoción iPhone Azul"
+                            width={600}
+                            height={800}
+                            className={styles.image}
+                        />
+                    </div>
                 </div>
             </div>
         </section>
