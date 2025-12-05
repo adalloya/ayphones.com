@@ -5,12 +5,24 @@ import styles from './Hero.module.css';
 export default function Hero() {
     return (
         <section className={styles.hero}>
-            <div className={styles.glow} />
+            <div className={styles.videoWrapper}>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={styles.video}
+                >
+                    <source src="/hero-bg.mp4" type="video/mp4" />
+                </video>
+                <div className={styles.overlay} />
+            </div>
+
             <div className="container">
                 <div className={styles.content}>
-                    <h1 className={`${styles.title} neon-text`}>
+                    <h1 className={styles.title}>
                         El Futuro de lo <br />
-                        <span className={styles.highlight}>Pre-Owned</span>
+                        <span className="neon-text">Pre-Owned</span>
                     </h1>
                     <p className={styles.subtitle}>
                         iPhones Premium. Calidad Certificada. Precios Insuperables.
