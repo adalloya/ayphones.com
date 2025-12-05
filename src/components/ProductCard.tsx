@@ -28,7 +28,7 @@ export default function ProductCard({ product }: { product: ProductProps }) {
                 <div className={styles.footer}>
                     <span className={styles.price}>${product.price}</span>
                     <Link href={`/product/${product.id}`}>
-                        <Button size="sm" variant="secondary">View</Button>
+                        <Button size="sm" variant="secondary">Ver</Button>
                     </Link>
                 </div>
             </div>

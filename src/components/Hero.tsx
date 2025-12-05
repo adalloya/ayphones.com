@@ -9,19 +9,19 @@ export default function Hero() {
             <div className="container">
                 <div className={styles.content}>
                     <h1 className={`${styles.title} neon-text`}>
-                        The Future of <br />
+                        El Futuro de lo <br />
                         <span className={styles.highlight}>Pre-Owned</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Premium iPhones. Certified Quality. Unbeatable Prices.
-                        Experience the new standard in second-hand tech.
+                        iPhones Premium. Calidad Certificada. Precios Insuperables.
+                        Experimenta el nuevo estándar en tecnología de segunda mano.
                     </p>
                     <div className={styles.actions}>
                         <Link href="/store">
-                            <Button size="lg">Shop Now</Button>
+                            <Button size="lg">Comprar Ahora</Button>
                         </Link>
                         <Link href="/about">
-                            <Button variant="secondary" size="lg">Learn More</Button>
+                            <Button variant="secondary" size="lg">Saber Más</Button>
                         </Link>
                     </div>
                 </div>

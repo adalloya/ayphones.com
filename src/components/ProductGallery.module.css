@@ -1,0 +1,55 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainImage {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.thumbnail {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.thumbnail:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.selected {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}

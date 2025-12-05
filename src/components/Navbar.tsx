@@ -1,28 +1,33 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <nav className={`${styles.navbar} glass`}>
             <div className="container">
                 <div className={styles.inner}>
                     <Link href="/" className={styles.logo}>
                         <Image
-                            src="/logo.jpg"
+                            src="/logo.png"
                             alt="HayPhones Logo"
-                            width={40}
+                            width={120}
                             height={40}
                             className={styles.logoImage}
+                            style={{ objectFit: 'contain' }}
                         />
-                        <span className="neon-text">HayPhones</span>
                     </Link>
 
-                    <div className={styles.links}>
-                        <Link href="/" className={styles.link}>Home</Link>
-                        <Link href="/store" className={styles.link}>Store</Link>
-                        <Link href="/about" className={styles.link}>About</Link>
-                        <Link href="/contact" className={styles.link}>Contact</Link>
+                    <div className={`${styles.links} ${isMenuOpen ? styles.open : ''} `}>
+                        <Link href="/" className={styles.link} onClick={() => setIsMenuOpen(false)}>Inicio</Link>
+                        <Link href="/store" className={styles.link} onClick={() => setIsMenuOpen(false)}>Tienda</Link>
+                        <Link href="/about" className={styles.link} onClick={() => setIsMenuOpen(false)}>Nosotros</Link>
+                        <Link href="/contact" className={styles.link} onClick={() => setIsMenuOpen(false)}>Contacto</Link>
                     </div>
 
                     <div className={styles.actions}>
@@ -31,6 +36,13 @@ export default function Navbar() {
                         </button>
                         <button className={styles.iconBtn} aria-label="Cart">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        </button>
+                        <button
+                            className={styles.menuBtn}
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label="Menu"
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                         </button>
                     </div>
                 </div>
