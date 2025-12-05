@@ -12,8 +12,8 @@ export default function Footer() {
                         <Image
                             src="/logo.png"
                             alt="HayPhones Logo"
-                            width={150}
-                            height={50}
+                            width={180}
+                            height={60}
                             className={styles.logo}
                             style={{ objectFit: 'contain' }}
                         />

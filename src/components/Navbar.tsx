@@ -16,8 +16,8 @@ export default function Navbar() {
                         <Image
                             src="/logo.png"
                             alt="HayPhones Logo"
-                            width={180}
-                            height={60}
+                            width={220}
+                            height={80}
                             className={styles.logoImage}
                             style={{ objectFit: 'contain' }}
                         />
