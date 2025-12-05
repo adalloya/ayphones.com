@@ -43,9 +43,9 @@ export default function ProductCard({ product, onClick }: { product: ProductProp
                     <span>{product.category}</span>
                 </div>
 
-                <button className={styles.button} onClick={onClick}>
+                <Button variant="primary" size="md" className={styles.button} onClick={onClick}>
                     Ver
-                </button>
+                </Button>
             </div>
         </div>
     );

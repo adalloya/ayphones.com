@@ -22,6 +22,34 @@ export default function Banners() {
         return () => clearInterval(timer);
     }, []);
 
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
+
+        if (isLeftSwipe) {
+            setCurrentSlide((prev) => (prev + 1) % BANNERS.length);
+        }
+        if (isRightSwipe) {
+            setCurrentSlide((prev) => (prev - 1 + BANNERS.length) % BANNERS.length);
+        }
+
+        setTouchStart(0);
+        setTouchEnd(0);
+    };
+
     return (
         <section className={styles.section}>
             <div className="container">
@@ -41,7 +69,12 @@ export default function Banners() {
                 </div>
 
                 {/* Mobile Carousel */}
-                <div className={styles.mobileCarousel}>
+                <div
+                    className={styles.mobileCarousel}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
                     <div
                         className={styles.slidesTrack}
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}

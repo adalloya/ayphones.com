@@ -38,7 +38,7 @@
 
 .logoImage {
     border-radius: 8px;
-    height: 70px;
+    height: 100px;
     /* Much larger desktop logo */
     width: auto;
 }
@@ -61,12 +61,13 @@
 
 @media (max-width: 768px) {
     .navbar {
-        height: 60px;
+        height: 90px;
+        /* Increased mobile navbar height */
     }
 
     .logoImage {
-        height: 60px;
-        /* Much larger mobile logo */
+        height: 70px;
+        /* Larger mobile logo */
         width: auto;
     }
 
