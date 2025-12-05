@@ -34,7 +34,7 @@ export default function ProductCard({ product, onClick }: { product: ProductProp
             <div className={styles.content}>
                 <div className={styles.header}>
                     <h3 className={styles.name}>{product.name}</h3>
-                    <span className={styles.price}>${product.price}</span>
+                    <span className={styles.price}>${product.price.toLocaleString()}</span>
                 </div>
 
                 <div className={styles.details}>

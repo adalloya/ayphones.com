@@ -80,6 +80,22 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                                 <span className={styles.label}>Color</span>
                                 <span className={styles.value}>{product.color || 'Estándar'}</span>
                             </div>
+                            <div className={styles.specItem}>
+                                <span className={styles.label}>Pantalla</span>
+                                <span className={styles.value}>{product.specs.display}</span>
+                            </div>
+                            <div className={styles.specItem}>
+                                <span className={styles.label}>Procesador</span>
+                                <span className={styles.value}>{product.specs.processor}</span>
+                            </div>
+                            <div className={styles.specItem}>
+                                <span className={styles.label}>Cámara</span>
+                                <span className={styles.value}>{product.specs.camera}</span>
+                            </div>
+                            <div className={styles.specItem}>
+                                <span className={styles.label}>Batería</span>
+                                <span className={styles.value}>{product.specs.battery}</span>
+                            </div>
                         </div>
 
                         <div className={styles.actions}>
