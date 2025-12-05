@@ -10,7 +10,8 @@ interface ProductProps {
     image: string;
     condition: string;
     storage: string;
-    category: string; // Added category based on the new JSX
+    category: string;
+    shipping?: string;
 }
 
 export default function ProductCard({ product }: { product: ProductProps }) {
@@ -24,6 +25,9 @@ export default function ProductCard({ product }: { product: ProductProps }) {
                     className={styles.image}
                 />
                 <span className={styles.badge}>{product.condition}</span>
+                {product.shipping === 'Entrega Inmediata' && (
+                    <span className={styles.shippingBadge}>⚡️ Entrega Inmediata</span>
+                )}
             </div>
 
             <div className={styles.content}>

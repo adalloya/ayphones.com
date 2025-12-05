@@ -15,7 +15,9 @@ export default function ProductInfo({ product }: ProductInfoProps) {
                 <div className={styles.priceWrapper}>
                     <span className={styles.price}>${product.price.toLocaleString()}</span>
                     {product.shipping && (
-                        <span className={styles.shipping}>{product.shipping}</span>
+                        <span className={`${styles.shipping} ${product.shipping === 'Entrega Inmediata' ? styles.immediate : ''}`}>
+                            {product.shipping === 'Entrega Inmediata' ? '⚡️ Entrega Inmediata' : product.shipping}
+                        </span>
                     )}
                 </div>
             </div>
