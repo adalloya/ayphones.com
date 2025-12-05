@@ -10,27 +10,37 @@ interface ProductProps {
     image: string;
     condition: string;
     storage: string;
+    category: string; // Added category based on the new JSX
 }
 
 export default function ProductCard({ product }: { product: ProductProps }) {
     return (
         <div className={`${styles.card} glass`}>
             <div className={styles.imageWrapper}>
-                <div className={styles.badge}>{product.condition}</div>
-                {/* Placeholder for real image, using a gray div for now if no image provided */}
-                <div className={styles.placeholder}>
-                    <span className="neon-text" style={{ fontSize: '2rem' }}></span>
-                </div>
+                <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className={styles.image}
+                />
+                <span className={styles.badge}>{product.condition}</span>
             </div>
+
             <div className={styles.content}>
-                <h3 className={styles.name}>{product.name}</h3>
-                <p className={styles.specs}>{product.storage}</p>
-                <div className={styles.footer}>
+                <div className={styles.header}>
+                    <h3 className={styles.name}>{product.name}</h3>
                     <span className={styles.price}>${product.price}</span>
-                    <Link href={`/product/${product.id}`}>
-                        <Button size="sm" variant="secondary">Ver</Button>
-                    </Link>
                 </div>
+
+                <div className={styles.details}>
+                    <span>{product.storage}</span>
+                    <span>•</span>
+                    <span>{product.category}</span>
+                </div>
+
+                <Link href={`/product/${product.id}`} className={styles.link}>
+                    <Button className={styles.button}>Ver</Button>
+                </Link>
             </div>
         </div>
     );

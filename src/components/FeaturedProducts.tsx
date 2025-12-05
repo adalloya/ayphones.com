@@ -8,7 +8,8 @@ const MOCK_PRODUCTS = [
         price: 1099,
         image: '/placeholder.png',
         condition: 'Como Nuevo',
-        storage: '256GB'
+        storage: '256GB',
+        category: 'iPhone'
     },
     {
         id: '2',
@@ -16,7 +17,8 @@ const MOCK_PRODUCTS = [
         price: 799,
         image: '/placeholder.png',
         condition: 'Excelente',
-        storage: '128GB'
+        storage: '128GB',
+        category: 'iPhone'
     },
     {
         id: '3',
@@ -24,7 +26,8 @@ const MOCK_PRODUCTS = [
         price: 499,
         image: '/placeholder.png',
         condition: 'Bueno',
-        storage: '64GB'
+        storage: '64GB',
+        category: 'iPhone'
     },
     {
         id: '4',
@@ -32,7 +35,8 @@ const MOCK_PRODUCTS = [
         price: 649,
         image: '/placeholder.png',
         condition: 'Como Nuevo',
-        storage: 'GPS + Cellular'
+        storage: 'GPS + Cellular',
+        category: 'Apple Watch'
     }
 ];
 
